@@ -1,0 +1,26 @@
+<h1>All Employees</h1>
+
+<%= link_to "Add Employee",'employees/new' %>
+
+<div>
+  <% @employees.each do |employee| %>
+    <p>
+      <strong>Id:</strong> <%= employee.id %>
+    </p>
+    <p>
+      <strong>Name:</strong> <%= employee.name %>
+    </p>
+    <p>
+      <strong>Position:</strong> <%= employee.position %>
+    </p>
+    <div>
+      <%= link_to "Show" , employee_path(employee.id) %>
+      <%= link_to "Edit" , edit_employee_path(employee.id) %>
+      <%= link_to "Destroy", employee_path(employee.id), data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      }  %>
+    </div>
+
+  <% end %>
+</div>
