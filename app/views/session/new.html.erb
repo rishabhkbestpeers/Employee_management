@@ -1,0 +1,22 @@
+<h1>Log In</h1>
+
+<% flash.each do |type, msg| %>
+    <h3>
+      <%= msg %>
+    </h3>
+<% end %>
+
+<%= form_with model: @user, url: session_new_path do |form| %>
+    <div class="mb-3">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Name" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :password %>
+    <%= form.password_field :password ,class: "form-control",placeholder: "password"%>
+    </div>
+
+    <div class="mb-3">
+    <%= form.submit "Sign Up", class:"btn btn-primary" %>
+     </div>
+<% end %>

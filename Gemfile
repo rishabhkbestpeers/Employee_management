@@ -26,6 +26,11 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "prawn", "~> 2.4" # for generating pdfs
+gem "prawn-table", "~> 0.2.2" # for adding tables to prawn pdfs, - 
+# because most reports have tables in them.
+gem "prawn-icon", "~> 3.1" # You may need this if you want to use icons at all
+gem "letter_opener", group: :development # add this under the development section.
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

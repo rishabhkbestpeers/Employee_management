@@ -3,7 +3,7 @@
     <div>
       <%= form.label :name %><br>
       <%= form.text_field :name %>
-      <% @employee.errors.full_messages_for(:name).each do |message| %>
+      <% @employee.errors.full_messages_for(:name).each do |message| %> <% end %>
     </div>
   
     <div>
@@ -15,4 +15,5 @@
       <%= form.submit %>
     </div>
 <% end %>
+
 

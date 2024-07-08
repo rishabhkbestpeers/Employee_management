@@ -46,7 +46,7 @@ class Employee < ApplicationRecord
     #     puts "you have found the object"
     # end
     
-    before_create :name, if: :is_valid_name?
+    # before_create :name, if: :is_valid_name?
 
     private
     def is_valid_name?
