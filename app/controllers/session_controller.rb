@@ -23,7 +23,7 @@ class SessionController < ApplicationController
 
     @name = User.find(session[:user_id]);
     session.delete(:user_id)
-    redirect_to session_new_path, notice:"#{@name.name} has logged out succesfully"
+    redirect_to log_in_path, notice:"#{@name.name} has logged out succesfully"
   end
 
   private

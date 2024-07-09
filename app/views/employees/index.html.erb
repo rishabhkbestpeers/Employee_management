@@ -1,8 +1,11 @@
 <h1>All Employees</h1>
+
+<h2>Currently Logged in user = <%=@user.name %></h2>
 <% flash.each do |type, msg| %>
   <h3>
    <%= msg %>
   </h3>
+
 <% end %>
 
 <%= link_to "Add Employee",'employees/new' %>

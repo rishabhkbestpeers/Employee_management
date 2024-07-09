@@ -9,7 +9,7 @@ class UserController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-           redirect_to session_new_path, notice: "#{@user.name} signed up succesfully"
+           redirect_to log_in_path, notice: "#{@user.name} signed up succesfully"
         else
            redirect_to sign_up_path, alert: "name is already taken, try with different name"
         end

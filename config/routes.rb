@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   
-  get 'session/new', to: 'session#new'
-  post 'session/new', to: 'session#create'
-  get 'session/create', to: 'session#create'
-  get 'session/log_out', to: 'session#destroy'
+  get '/log_in', to: 'session#new'
+  post '/log_in', to: 'session#create'
+  get '/log_out', to: 'session#destroy'
 
   get '/sign_up', to: 'user#new'
   post '/sign_up', to: 'user#create'
